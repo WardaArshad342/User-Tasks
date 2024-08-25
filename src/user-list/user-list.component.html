@@ -1,4 +1,40 @@
-<div class="flex h-screen">
+
+<h1>Hi</h1>
+
+
+@if(users$ | async; as users) {
+    @if(users.length > 0) {
+
+    }
+}
+
+<!-- @if(users$ | async; as users) {
+    @if(users.length > 0) {
+        <ul>
+            <li>abc</li>
+            @for(user of users; track $index) {
+                <li class="p-2 bg-slate-100 border-b-2 border-slate-200">
+                    <span class="font-light text-3x1">{{ user.Name }}</span>
+                </li>
+            }
+        </ul>
+    }
+    @else {
+        <p>No Contacts</p>
+    }
+} -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="flex h-screen">
  
     <div class="w-[50%]">
         <p>Hii</p>
@@ -8,7 +44,7 @@
  
         @if(users$ | async; as users) {
             <h1>users.length hdjwhdjs</h1>
-            <!-- @if(users.length > 0) {
+            @if(users.length > 0) {
                 <ul>
                     @for(user of users; track $index) {
                         <li class="p-2 bg-slate-100 border-b-2 border-slate-200">
@@ -19,10 +55,10 @@
             }
             @else {
                 <p>No Contacts</p>
-            } -->
+            }
         }
         
      
     </div>
  
-  </div>
+  </div> -->
