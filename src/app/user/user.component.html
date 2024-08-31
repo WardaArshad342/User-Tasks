@@ -2,20 +2,19 @@
 <!-- <div>
     <button (click)="onSelectUser()">
         <img 
-            [src]="ImagePath" 
-            alt="selectedUser.name" 
+            [src]="ImagePath()" 
+            alt="name" 
         />
-        <span>{{ selectedUser.name }}</span>
+        <span>{{ name }}</span>
     </button>
 </div> -->
 
-<!-- Using Signals -->
 <div>
-    <button (click)="onSelectSignalUser()">
+    <button (click)="onSelectUser()">
         <img 
             [src]="ImagePathSignal()" 
-            alt="selectedUserSignal().name" 
+            alt="nameSignal()" 
         />
-        <span>{{ selectedUserSignal().name }}</span>
+        <span>{{ nameSignal() }}</span>
     </button>
 </div>

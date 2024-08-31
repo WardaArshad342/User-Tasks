@@ -3,7 +3,16 @@
 <main>
   <ul id="users">
     <li>
-      <app-user />
+      <app-user [avatarSignal]="users[0].avatar" [nameSignal]="users[0].name" />
+    </li>
+    <li>
+      <app-user [avatarSignal]="users[1].avatar" [nameSignal]="users[1].name" />
+    </li>
+    <li>
+      <app-user [avatarSignal]="users[2].avatar" [nameSignal]="users[2].name" />
+    </li>
+    <li>
+      <app-user [avatarSignal]="users[3].avatar" [nameSignal]="users[3].name" />
     </li>
   </ul>
 </main>
