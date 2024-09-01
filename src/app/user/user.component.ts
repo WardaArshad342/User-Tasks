@@ -1,4 +1,4 @@
-import { Component, computed, input, Input } from '@angular/core';
+import { Component, computed, EventEmitter, input, Input, Output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
 
 @Component({
@@ -9,20 +9,17 @@ import { DUMMY_USERS } from '../dummy-users';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  // @Input({ required: true }) avatar! : string;
-  // @Input({ required: true }) name! : string;
-  // ImagePath(){
-  //   return 'assets/' + this.avatar;
-  // }
+  @Input({ required: true }) id! : string;
+  @Input({ required: true }) avatar! : string;
+  @Input({ required: true }) name! : string;
+  @Output() select = new EventEmitter();
 
+  ImagePath(){
+    return 'assets/' + this.avatar;
+  }
 
-  avatarSignal = input.required<string>();
-  nameSignal = input.required<string>();
-  ImagePathSignal = computed(() => {
-    return 'assets/' + this.avatarSignal();
-  })
-
-  
-  onSelectUser() {}
+  onSelectUser() {
+    this.select.emit(this.id);
+  }
 
 }
