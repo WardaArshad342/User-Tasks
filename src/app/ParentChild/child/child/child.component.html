@@ -1,0 +1,5 @@
+@for(pt of patientList; track pt.id){
+    <button class="btn btn-primary" (click)="onSelectPatient(pt.id)">{{ pt.id + ' ' + pt.name}}</button>
+    <br>
+    <br>
+}
