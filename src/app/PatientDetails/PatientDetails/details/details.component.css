@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    margin: 0 auto;  /* Centers the container if needed */
+    width: 90%;      /* Adjust based on your layout needs */
+}
+ 
+.left-component {
+    flex: 1;           /* Each component takes half the width of the container */
+    padding: 10px;     /* Reduced padding for a tighter layout */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    width: 30%;      /* Adjust based on your layout needs */
+}
+.right-component {
+    flex: 1;           /* Each component takes half the width of the container */
+    padding: 10px;     /* Reduced padding for a tighter layout */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    width: 70%;      /* Adjust based on your layout needs */
+}
+.patient, .detail {
+    margin-bottom: 5px; /* Reduced margin-bottom for a tighter vertical layout */
+    padding: 8px;       /* Reduced padding inside each patient or detail box */
+}
+ 
+.name, .condition, .status {
+    margin-bottom: 2px; /* Smaller space between sub-items */
+}
+ 
+/* Additional styling to make it visually appealing */
+.patient:hover, .detail:hover {
+    cursor: pointer;
+}
