@@ -4,10 +4,10 @@ import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './dummy-users';
 import { TasksComponent } from './tasks/tasks.component';
-import { ParentComponent } from "./ParentChild/Parent/parent/parent.component";
-import { ChildComponent } from "./ParentChild/child/child/child.component";
 import { PatientsComponent } from "./PatientDetails/patients/patients.component";
-import { DetailsComponent } from "./PatientDetails/PatientDetails/details/details.component";
+import { DetailsComponent } from './PatientDetails/PatientDetails/details.component';
+import { ChildComponent } from './ParentChild/child/child.component';
+import { ParentComponent } from './ParentChild/Parent/parent.component';
 
 @Component({
     selector: 'app-root',

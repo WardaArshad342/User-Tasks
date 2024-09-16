@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Patients } from '../../Patients.model';
-import { PatientsComponent } from "../../patients/patients.component";
+import { PatientsComponent } from '../patients/patients.component';
+import { Patients } from '../Patients.model';
 
 @Component({
   selector: 'app-details',

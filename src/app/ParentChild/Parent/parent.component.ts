@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Patient } from '../../patient.model';
-import { ChildComponent } from '../../child/child/child.component';
+import { ChildComponent } from '../child/child.component';
+import { Patient } from '../patient.model';
 
 @Component({
   selector: 'app-parent',
