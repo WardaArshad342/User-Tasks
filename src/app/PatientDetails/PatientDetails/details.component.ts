@@ -1,11 +1,8 @@
-import { Component, Input } from '@angular/core';
-import { PatientsComponent } from '../patients/patients.component';
+import { Component } from '@angular/core';
 import { Patients } from '../Patients.model';
 
 @Component({
   selector: 'app-details',
-  standalone: true,
-  imports: [PatientsComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })

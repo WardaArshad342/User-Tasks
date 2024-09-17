@@ -3,8 +3,6 @@ import { Patient } from '../patient.model';
 
 @Component({
   selector: 'app-child',
-  standalone: true,
-  imports: [],
   templateUrl: './child.component.html',
   styleUrl: './child.component.css'
 })
