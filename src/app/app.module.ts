@@ -16,10 +16,9 @@ import { TaskComponent } from "./tasks/task/task.component";
 import { NewTaskComponent } from "./tasks/new-task/new-task.component";
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, UserComponent, TasksComponent, //User and its Tasks
+    declarations: [AppComponent, HeaderComponent, UserComponent, TasksComponent, TaskComponent, NewTaskComponent,//User and its Tasks
         ParentComponent, ChildComponent, //Parent Child
         DetailsComponent, PatientsComponent, //Parent Child
-        TaskComponent, NewTaskComponent,
         CardComponent
         ],
     bootstrap: [AppComponent],
