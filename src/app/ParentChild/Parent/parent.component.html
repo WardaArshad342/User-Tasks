@@ -1,0 +1,29 @@
+
+<button class="btn btn-primary" (click)="AddPatient()">Add Task</button>
+
+<br>
+<br>
+<br>
+
+<h2>Input</h2>
+<p>Here for input we only use Input and then add and assign it in the app-child tag like [patientList]="patients" where patientList
+    is Input variable and patients is the list of patients in the ts files whose html file we are working on (Parent one).
+</p>
+
+<h2>Output</h2>
+<p>Here for output we use Output parameter and event Emitter. Then we have to use the event emitter parameter and have to assign value
+    of a function of the parent ts file where is finds the matched value. Output is coming from Chiled from emitting and we are 
+    passing that emitted value or object to the function of parent component like (selectedPatientId)="handleChildResponse($event).
+    selectedPatientId is Output variable in child component which is emitting the clicked patient which is another event called 
+    on click of a patient and emit the clicked one.
+    handleChildResponse is a function in parent that is taking the emitted value
+</p>
+
+<div>
+    <app-child [patientList]="patients" (selectedPatientId)="handleChildResponse($event)"></app-child>
+</div>
+
+
+<h2>{{ selectedPatient?.id }}</h2>
+<h2>{{ selectedPatient?.name }}</h2> 
+<h2>{{ selectedPatient?.age }}</h2>

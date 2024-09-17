@@ -1,0 +1,22 @@
+
+<div class="left-component">
+    @for (pt of patientList; track $index) {
+        <app-patients [patient]="pt" (selectedPatientId)="selectedId($event)"></app-patients>
+    }
+    <!-- <app-patients [patientList]="patientList" (selectedPatientId)="selectedId($event)"></app-patients> -->
+</div>
+
+    
+@if(selectedPatient){
+    <div class="right-component">
+        <div class="detail">
+            <h2>Patient Details</h2>
+            <h2>{{ selectedPatient.name }}</h2>
+            <div>{{ selectedPatient.age }}</div>
+            <div>{{ selectedPatient.gender }}</div>
+            <div>{{ selectedPatient.diagnosis }}</div>
+        </div>
+    </div>
+}@else {
+    No Patient Selected
+}

@@ -1,0 +1,23 @@
+
+    <div class="left-component">
+        <div class="detail" (click)="onClickPatient(patient.id)">
+            <h3>{{ patient.name }}</h3>
+            <p>{{ patient.diagnosis }}</p>
+            <div [ngStyle]="{'color': patient.isSigned ? 'green' : 'red'}">
+                @if (patient.isSigned){
+                    Signed
+                } @else {
+                    UnSigned
+                }      
+            </div>
+            <!-- <p [style.color]="patient.isSigned ? 'green' : 'red'">@if (patient.isSigned){
+                Signed
+            } @else {
+                UnSigned
+            }  -->
+            <hr>
+        </div>
+    </div>
+
+
+

@@ -1,18 +1,47 @@
-<app-header />
 
+<!-- Header with User list and their Tasks -->
+<app-header />
 <main>
   <ul id="users">
     @for (user of users; track user.id) {
       <li>
-        <app-user [user]="user" (select)="onSelectUser($event)" />
+        <app-user [selected]="user.id === selectedUserId" [user]="user" (select)="onSelectUser($event)" />
       </li>
     }
   </ul>
 
   @if (selectedUser) {
-    <app-tasks [name]="selectedUser.name"/>
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name"/>
   } @else {
     <p id="fallback">Select a user to see their tasks!</p>
   }
-
 </main>
+
+<!-- Parent Child -->
+<!-- <div>
+  <app-parent />
+</div> -->
+
+<!-- Parent Child -->
+<!-- <div>
+  <app-details />
+</div> -->
+
+<!-- Routing -->
+ <!-- <ul>
+  <li>
+    <a routerLink="app-first" routerLinkActive="active" style="text-decoration: none; color: #3498db;">As HTML Tag</a>
+  </li>
+
+  <li>
+    <a style="text-decoration: none; color: #3498db;" (click)="Routing()">As Click Event</a>
+  </li>
+
+  <li>
+    <a style="text-decoration: none; color: #3498db;" [routerLink]="['/app-routerlink']">As Directive</a>
+  </li>
+
+ </ul>
+<router-outlet></router-outlet> -->
+ 
+
